@@ -1,0 +1,39 @@
+spring:
+  #datasource config
+  datasource:
+    url: jdbc:mysql://192.168.1.242:3306/liuhx?useCompression=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    continue-on-error: false
+    driver-class-name: com.mysql.jdbc.Driver
+    #druid config
+    druid:
+      initial-size: 10
+      min-idle: 10
+      max-active: 200
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      filter:
+        wall:
+          config:
+            multi-statement-allow: true
+      filters: wall,stat
+#mybatis plus config
+mybatis-plus:
+  mapper-locations: classpath:xml/*.xml
+  typeAliasesPackage: ${app.base-package}.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+  global-config:
+    db-column-underline: true
+    refresh-mapper: true

@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: apidemo
+  cloud:
+    config:
+      enabled: false

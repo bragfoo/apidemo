@@ -1,0 +1,15 @@
+spring:
+  redis:
+    port: 6379
+    host: 192.168.1.242
+    database: 0
+    #    password: 8dc40c2c4598ae5a
+    ssl: false
+    jedis:
+      pool:
+        max-active: 1000
+        max-idle: 100
+        min-idle: 0
+#    sentinel:
+#      master: mymaster
+#      nodes: 180.76.53.32:26379,180.76.155.168:26379,180.76.110.192:26379

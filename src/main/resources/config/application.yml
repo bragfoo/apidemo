@@ -1,0 +1,38 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  profiles:
+    include:
+    - 3rd
+    - database
+    - redis
+    - mongo
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+  freemarker:
+    enabled: true
+    allow-request-override: true
+swagger:
+  enabled: true
+  base-package: com.liuhx.apidemo
+  description: Api接口项目示例代码
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+logging:
+  config: classpath:config/logback.xml
+
+test:
+  limit: 10

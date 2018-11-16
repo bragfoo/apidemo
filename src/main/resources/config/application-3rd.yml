@@ -1,0 +1,6 @@
+third:
+  test:
+    root-uri: http://localhost:8080
+    ping-uri: /ping
+  weather:
+    uri: https://www.tianqiapi.com/api/?version=v1&city={city}
