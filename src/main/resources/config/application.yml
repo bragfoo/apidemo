@@ -10,6 +10,7 @@ spring:
     - database
     - redis
     - mongo
+    - es
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
@@ -32,7 +33,7 @@ management:
       exposure:
         include: '*'
 logging:
-  config: classpath:config/logback.xml
+  config:  ${spring.config.location:classpath:config}/logback.xml
 
 test:
   limit: 10

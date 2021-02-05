@@ -9,6 +9,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 import org.springframework.data.mongodb.config.EnableMongoAuditing;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.data.repository.query.QueryLookupStrategy;
@@ -29,6 +30,7 @@ import java.time.Duration;
 @MapperScan(basePackages = {"com.liuhx.apidemo.dao.mapper"})
 @EnableMongoAuditing
 @EnableMongoRepositories(basePackages = {"com.liuhx.apidemo.dao.repository"}, queryLookupStrategy = QueryLookupStrategy.Key.CREATE_IF_NOT_FOUND)
+@EnableElasticsearchRepositories(basePackages = {"com.liuhx.apidemo.dao.es"},queryLookupStrategy = QueryLookupStrategy.Key.CREATE_IF_NOT_FOUND)
 public class AppConfig {
 
     @Bean

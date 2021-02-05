@@ -1,0 +1,5 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-nodes: 111.198.22.175:19330,111.198.22.175:19331,111.198.22.175:19332
+      cluster-name: es-cluster

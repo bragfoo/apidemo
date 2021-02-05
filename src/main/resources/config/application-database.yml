@@ -1,9 +1,9 @@
 spring:
   #datasource config
   datasource:
-    url: jdbc:mysql://192.168.1.242:3306/liuhx?useCompression=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+    url: jdbc:mysql://111.198.22.175:13306/liuhx?useCompression=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
     username: root
-    password: root
+    password: 69213535
     type: com.alibaba.druid.pool.DruidDataSource
     continue-on-error: false
     driver-class-name: com.mysql.jdbc.Driver
